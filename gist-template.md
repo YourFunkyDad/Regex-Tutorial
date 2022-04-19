@@ -43,7 +43,7 @@ Quantifiers will set the limit on your string that the regex will match. This al
 
 + - Matches the pattern one or more times. Characters placed directly to the left of the + will only be matched. 
 
-Example: 'Allred+' (The quantifier is only applied to the lowercase "d". Remember Regex is case-sensitive).
+Example: 'Allred+' (The quantifier is only applied to the lowercase "d". Remember Regex is case-sensitive!).
 
 ? - Matches the pattern zero or one times. 
 
@@ -53,23 +53,56 @@ Example: 'Allred+' (The quantifier is only applied to the lowercase "d". Remembe
     { 3, 9 } - Matches the pattern for a minimum of 3 times to a maximum of 9 times.
 
     /^[a-z0-9_-$%@]{2,10}$/ - This example means the pattern will match any lowercase letters between 'a' and 'z', as well as matching patterns with numbers 0-9, the special characters of a underscore, hyphen, a dollar sign, and percentage sign, and the 'at symbol'. The quantifier also limits pattern to a minimum of 2 characters and a maximum of 10 characters. 
+
 ### OR Operator
 The OR Operator is identified using the | symbol. The search pattern will match anything that precedes or follows |
 
 ### Character Classes
 In regex, character classes defines a set of characters that can be used in an input string. There is also character escape, which when using the backslash '\', helps a character not be interpreted literally. 
 
+. - matches any character except the newline character.
+
+\d - matches any numerical digit. The same as using [0-9]
+
+\D - matches any non-numerical digits.
+
+\w - matches any alphanumerical character including the underscore. The same as using [A-Za-z0-9_]
+
+\s - matches a single whitespace character including lines and breaks. 
+
+' - accepts any input
+
+
 ### Flags
+
+i - ignores the case when searching in the string.
+
+g - global search meaning all possible matches will be searched. 
+
+m - multi-line input string
+
+s - global search for whitespace characters
 
 
 ### Grouping and Capturing
+When grouping a section of regex, you use parenthesis. () The sections within the parenthesis is called a subexpression. You can also include a numerical counter to a subexpression. 
 
+'(Jacob){5}' searches for 'JacobJacobJacobJacobJacob'
 
 ### Bracket Expressions
+Also known as positive character group, anything put inside of square brackets [] will represent a wide range of characters we want to match. 
 
+Hyphens are used to represent a range of characters. 
+
+[a-g] = [abcdefg] 
+[abc] = will match anything that contains any of those characters, regardless of the length. 
 
 ### Greedy and Lazy Match
+Lazy and Greedy matches are added to quantifiers to either lengthen or shorten the search results. 
 
+Lazy - Adding a ? to a quantifier will make it match as few occurrences as possible. 
+
+Greedy matches are any of the above quantifiers to match as many possible occurrences. 
 
 ### Boundaries
 
@@ -82,4 +115,6 @@ In regex, character classes defines a set of characters that can be used in an i
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+You can call me YourFunkyDad. I am a full time father, a full-time serving, and most recently I have taken up coding as a means to challenge myself to learn a new skill. I hope one day I will be able to transition into a coding profession. But for now, I will continue to study and practice. 
+
+https://github.com/YourFunkyDad
